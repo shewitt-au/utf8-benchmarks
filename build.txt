@@ -9,5 +9,3 @@ cmake --build build --config Release
 3) Run tests
 
 .\build\Release\bench.exe
-
-

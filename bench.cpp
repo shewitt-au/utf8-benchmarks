@@ -176,7 +176,7 @@ BENCHMARK(BM_AxCut_utf8StringLength2_PoemRussian)
 //BENCHMARK_MAIN();
 
 int main(int argc, char** argv) {
-    std::cout << "Benchmark randoms string\n";
+    std::cout << "Benchmark random string\n";
     std::cout << "----------------\n";
     std::cout << test_string << '\n';
     std::cout << "----------------\n";

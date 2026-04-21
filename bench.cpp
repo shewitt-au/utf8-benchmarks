@@ -134,7 +134,7 @@ BENCHMARK(BM_AxCut_utf8StringLength_Random)
 BENCHMARK(BM_AxCut_utf8StringLength2_Random)
     ->Name("Random/AxCut/2");
 
-// English
+// Poen English
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemEnglish)
     ->Name("PoemEnglish/Steve/Traditional");
 
@@ -147,7 +147,7 @@ BENCHMARK(BM_AxCut_utf8StringLength_PoemEnglish)
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemEnglish)
     ->Name("PoemEnglish/AxCut/2");
 
-// Chinese
+// Poem Chinese
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemChinese)
     ->Name("PoemChinese/Steve/Traditional");
 
@@ -160,7 +160,7 @@ BENCHMARK(BM_AxCut_utf8StringLength_PoemChinese)
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemChinese)
     ->Name("PoemChinese/AxCut/2");
 
-// Russian
+// Poem Russian
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemRussian)
     ->Name("PoemRussian/Steve/Traditional");
 

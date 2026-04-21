@@ -126,29 +126,29 @@ static void BM_AxCut_utf8StringLength2_PoemRussian(benchmark::State& state) {
 
 
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_Random);
-BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemEnglish);
-BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemChinese);
-BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemRussian);
-
 BENCHMARK(BM_Steve_strlenUtf8_Random);
-BENCHMARK(BM_Steve_strlenUtf8_PoemEnglish);
-BENCHMARK(BM_Steve_strlenUtf8_PoemChinese);
-BENCHMARK(BM_Steve_strlenUtf8_PoemRussian);
-
 BENCHMARK(BM_AxCut_utf8StringLength_Random);
-BENCHMARK(BM_AxCut_utf8StringLength_PoemEnglish);
-BENCHMARK(BM_AxCut_utf8StringLength_PoemChinese);
-BENCHMARK(BM_AxCut_utf8StringLength_PoemRussian);
-
 BENCHMARK(BM_AxCut_utf8StringLength2_Random);
+
+BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemEnglish);
+BENCHMARK(BM_Steve_strlenUtf8_PoemEnglish);
+BENCHMARK(BM_AxCut_utf8StringLength_PoemEnglish);
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemEnglish);
+
+BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemChinese);
+BENCHMARK(BM_Steve_strlenUtf8_PoemChinese);
+BENCHMARK(BM_AxCut_utf8StringLength_PoemChinese);
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemChinese);
+
+BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemRussian);
+BENCHMARK(BM_Steve_strlenUtf8_PoemRussian);
+BENCHMARK(BM_AxCut_utf8StringLength_PoemRussian);
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemRussian);
 
 //BENCHMARK_MAIN();
 
 int main(int argc, char** argv) {
-    std::cout << "Benchmark random string\n";
+    std::cout << "Benchmark randomstring\n";
     std::cout << "----------------\n";
     std::cout << test_string << '\n';
     std::cout << "----------------\n";

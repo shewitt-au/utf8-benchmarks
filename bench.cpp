@@ -93,6 +93,38 @@ static void BM_AxCut_utf8StringLength_PoemRussian(benchmark::State& state) {
     }
 }
 
+////
+
+static void BM_AxCut_utf8StringLength2_Random(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength2(test_string);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength2_PoemEnglish(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength2(g_poemEnglish);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength2_PoemChinese(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength2(g_poemChinese);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength2_PoemRussian(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength2(g_poemRussian);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+
+
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_Random);
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemEnglish);
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemChinese);
@@ -107,6 +139,11 @@ BENCHMARK(BM_AxCut_utf8StringLength_Random);
 BENCHMARK(BM_AxCut_utf8StringLength_PoemEnglish);
 BENCHMARK(BM_AxCut_utf8StringLength_PoemChinese);
 BENCHMARK(BM_AxCut_utf8StringLength_PoemRussian);
+
+BENCHMARK(BM_AxCut_utf8StringLength2_Random);
+BENCHMARK(BM_AxCut_utf8StringLength2_PoemEnglish);
+BENCHMARK(BM_AxCut_utf8StringLength2_PoemChinese);
+BENCHMARK(BM_AxCut_utf8StringLength2_PoemRussian);
 
 //BENCHMARK_MAIN();
 

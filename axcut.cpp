@@ -2,15 +2,12 @@
 
 #include "axcut.hpp"
 #include <cmath>
-#include <cstdint>
+#include <bit>
 
 namespace axcut {
 
-using u8 = std::uint8_t;
-using u32 = std::uint32_t;
-
 size_t utf8CharLength(u8 c) {
-        if ((c & 0xFE) == 0xFC)
+    if ((c & 0xFE) == 0xFC)
         return 6;
     if ((c & 0xFC) == 0xF8)
         return 5;
@@ -67,6 +64,27 @@ size_t utf8StringLength(const std::string_view &str) {
     float count = 0;
     for (size_t idx = 0; idx < str.size(); count++) {
         std::string_view charView = str.substr(idx, utf8CharLength(str[idx]));
+        if (isCJKGlyph(charView))
+            count += 0.75f;
+
+        idx += utf8CharLength(str[idx]);
+    }
+    return static_cast<size_t>(std::ceil(count));
+}
+
+
+static const size_t sizes[] = { 1, 1, 2, 3, 4 };
+size_t utf8CharLength2(u8 c) {
+    auto leadingOnes = std::countl_one((u8)(c & 0xF0));
+    return sizes[leadingOnes];
+}
+
+size_t utf8StringLength2(const std::string_view &str) {
+    if (str.empty())
+        return 0;
+    float count = 0;
+    for (size_t idx = 0; idx < str.size(); count++) {
+        std::string_view charView = str.substr(idx, utf8CharLength2(str[idx]));
         if (isCJKGlyph(charView))
             count += 0.75f;
 

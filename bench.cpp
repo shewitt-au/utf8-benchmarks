@@ -123,8 +123,6 @@ static void BM_AxCut_utf8StringLength2_PoemRussian(benchmark::State& state) {
     }
 }
 
-
-
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_Random);
 BENCHMARK(BM_Steve_strlenUtf8_Random);
 BENCHMARK(BM_AxCut_utf8StringLength_Random);
@@ -148,7 +146,7 @@ BENCHMARK(BM_AxCut_utf8StringLength2_PoemRussian);
 //BENCHMARK_MAIN();
 
 int main(int argc, char** argv) {
-    std::cout << "Benchmark randomstring\n";
+    std::cout << "Benchmark randoms tring\n";
     std::cout << "----------------\n";
     std::cout << test_string << '\n';
     std::cout << "----------------\n";

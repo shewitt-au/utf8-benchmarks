@@ -134,7 +134,7 @@ BENCHMARK(BM_AxCut_utf8StringLength_Random)
 BENCHMARK(BM_AxCut_utf8StringLength2_Random)
     ->Name("Random/AxCut/2");
 
-// Poen English
+// Poem English
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemEnglish)
     ->Name("Poem/English/Steve/Traditional");
 

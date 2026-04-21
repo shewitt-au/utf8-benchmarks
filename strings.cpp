@@ -44,21 +44,21 @@ std::string make_random_utf8(size_t target_bytes) {
     return s;
 }
 
-std::string g_poemEnglish = 
+std::string g_poemEnglish =
     "The Road Not Taken” by Robert Frost\n\n"
     "Two roads diverged in a yellow wood,\n"
     "And sorry I could not travel both\n"
     "And be one traveler, long I stood\n"
     "And looked down one as far as I could\n";
 
-std::string g_poemChinese = 
+std::string g_poemChinese =
     "未选择的路 — 罗伯特·弗罗斯特\n\n"
     "黄色的树林里分出两条路，\n"
     "可惜我不能同时去涉足。\n"
     "我久久伫立，独自一人，\n"
     "尽可能地向其中一条望去。\n";
 
-std::string g_poemRussian = 
+std::string g_poemRussian =
     "В жёлтом лесу расходились две дороги,\n\n"
     "И жаль, что я не мог пройти по обеим.\n"
     "Я долго стоял, одинокий путник,\n"

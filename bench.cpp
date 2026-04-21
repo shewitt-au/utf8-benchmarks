@@ -136,42 +136,42 @@ BENCHMARK(BM_AxCut_utf8StringLength2_Random)
 
 // Poen English
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemEnglish)
-    ->Name("PoemEnglish/Steve/Traditional");
+    ->Name("Poem/English/Steve/Traditional");
 
 BENCHMARK(BM_Steve_strlenUtf8_PoemEnglish)
-    ->Name("PoemEnglish/Steve/Optimized");
+    ->Name("Poem/English/Steve/Optimized");
 
 BENCHMARK(BM_AxCut_utf8StringLength_PoemEnglish)
-    ->Name("PoemEnglish/AxCut/1");
+    ->Name("Poem/English/AxCut/1");
 
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemEnglish)
-    ->Name("PoemEnglish/AxCut/2");
+    ->Name("Poem/English/AxCut/2");
 
 // Poem Chinese
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemChinese)
-    ->Name("PoemChinese/Steve/Traditional");
+    ->Name("Poem/Chinese/Steve/Traditional");
 
 BENCHMARK(BM_Steve_strlenUtf8_PoemChinese)
-    ->Name("PoemChinese/Steve/Optimized");
+    ->Name("Poem/Chinese/Steve/Optimized");
 
 BENCHMARK(BM_AxCut_utf8StringLength_PoemChinese)
-    ->Name("PoemChinese/AxCut/1");
+    ->Name("Poem/Chinese/AxCut/1");
 
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemChinese)
-    ->Name("PoemChinese/AxCut/2");
+    ->Name("Poem/Chinese/AxCut/2");
 
 // Poem Russian
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_PoemRussian)
-    ->Name("PoemRussian/Steve/Traditional");
+    ->Name("Poem/Russian/Steve/Traditional");
 
 BENCHMARK(BM_Steve_strlenUtf8_PoemRussian)
-    ->Name("PoemRussian/Steve/Optimized");
+    ->Name("Poem/Russian/Steve/Optimized");
 
 BENCHMARK(BM_AxCut_utf8StringLength_PoemRussian)
-    ->Name("PoemRussian/AxCut/1");
+    ->Name("Poem/Russian/AxCut/1");
 
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemRussian)
-    ->Name("PoemRussian/AxCut/2");
+    ->Name("Poem/Russian/AxCut/2");
 
 //BENCHMARK_MAIN();
 

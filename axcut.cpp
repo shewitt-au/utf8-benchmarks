@@ -4,22 +4,24 @@
 #include <cmath>
 #include <cstdint>
 
+namespace axcut {
+
 using u8 = std::uint8_t;
 using u32 = std::uint32_t;
 
 size_t utf8CharLength(u8 c) {
         if ((c & 0xFE) == 0xFC)
-            return 6;
-        if ((c & 0xFC) == 0xF8)
-            return 5;
-        if ((c & 0xF8) == 0xF0)
-            return 4;
-        if ((c & 0xF0) == 0xE0)
-            return 3;
-        if ((c & 0xE0) == 0xC0)
-            return 2;
-        return 1;
-    }
+        return 6;
+    if ((c & 0xFC) == 0xF8)
+        return 5;
+    if ((c & 0xF8) == 0xF0)
+        return 4;
+    if ((c & 0xF0) == 0xE0)
+        return 3;
+    if ((c & 0xE0) == 0xC0)
+        return 2;
+    return 1;
+}
 
 u32 getCodePoint(std::string_view utf8Character) {
     if (utf8Character.empty())
@@ -72,3 +74,5 @@ size_t utf8StringLength(const std::string_view &str) {
     }
     return static_cast<size_t>(std::ceil(count));
 }
+
+} // namespace axcut {

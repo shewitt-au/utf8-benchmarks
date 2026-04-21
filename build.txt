@@ -1,11 +1,13 @@
-1) Configure step. Generates the build system, not the program
+MingW commands
+
+1. Configure step. Generates the build system, not the program
 
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
-2) Build step. Build the tests
+2. Build step. Build the tests
 
 cmake --build build --config Release
 
-3) Run tests
+3. Run tests
 
-.\build\Release\bench.exe
+.\build\bench.exe

@@ -17,7 +17,7 @@ set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(benchmark)
 
-add_executable(bench bench.cpp strings.cpp)
+add_executable(bench bench.cpp strings.cpp steve.cpp axcut.cpp)
 
 target_link_libraries(bench PRIVATE benchmark::benchmark)
 

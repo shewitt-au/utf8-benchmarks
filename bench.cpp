@@ -121,6 +121,90 @@ static void BM_AxCut_utf8StringLength2_PoemRussian(benchmark::State& state) {
     }
 }
 
+static void BM_Steve_strlenUtf8_Traditional_ShortStringEnglish(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = steve::strlenUtf8_Traditional(g_shortStringEnglish);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_Steve_strlenUtf8_Traditional_ShortStringChinese(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = steve::strlenUtf8_Traditional(g_shortStringChinese);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_Steve_strlenUtf8_Traditional_ShortStringRussian(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = steve::strlenUtf8_Traditional(g_shortStringRussian);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_Steve_strlenUtf8_ShortStringEnglish(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = steve::strlenUtf8(g_shortStringEnglish);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_Steve_strlenUtf8_ShortStringChinese(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = steve::strlenUtf8(g_shortStringChinese);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_Steve_strlenUtf8_ShortStringRussian(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = steve::strlenUtf8(g_shortStringRussian);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength_ShortStringEnglish(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength(g_shortStringEnglish);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength_ShortStringChinese(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength(g_shortStringChinese);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength_ShortStringRussian(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength(g_shortStringRussian);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength2_ShortStringEnglish(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength2(g_shortStringEnglish);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength2_ShortStringChinese(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength2(g_shortStringChinese);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
+static void BM_AxCut_utf8StringLength2_ShortStringRussian(benchmark::State& state) {
+    for (auto _ : state) {
+        auto result = axcut::utf8StringLength2(g_shortStringRussian);
+        benchmark::DoNotOptimize(result);
+    }
+}
+
 // Random
 BENCHMARK(BM_Steve_strlenUtf8_Traditional_Random)
     ->Name("Random/Steve/Traditional");
@@ -172,6 +256,45 @@ BENCHMARK(BM_AxCut_utf8StringLength_PoemRussian)
 
 BENCHMARK(BM_AxCut_utf8StringLength2_PoemRussian)
     ->Name("Poem/Russian/AxCut/2");
+
+// Short string English
+BENCHMARK(BM_Steve_strlenUtf8_Traditional_ShortStringEnglish)
+    ->Name("Short-string/English/Steve/Traditional");
+
+BENCHMARK(BM_Steve_strlenUtf8_ShortStringEnglish)
+    ->Name("Short-string/English/Steve/Optimized");
+
+BENCHMARK(BM_AxCut_utf8StringLength_ShortStringEnglish)
+    ->Name("Short-string/English/AxCut/1");
+
+BENCHMARK(BM_AxCut_utf8StringLength2_ShortStringEnglish)
+    ->Name("Short-string/English/AxCut/2");
+
+// Short string Chinese
+BENCHMARK(BM_Steve_strlenUtf8_Traditional_ShortStringChinese)
+    ->Name("Short-string/Chinese/Steve/Traditional");
+
+BENCHMARK(BM_Steve_strlenUtf8_ShortStringChinese)
+    ->Name("Short-string/Chinese/Steve/Optimized");
+
+BENCHMARK(BM_AxCut_utf8StringLength_ShortStringChinese)
+    ->Name("Short-string/Chinese/AxCut/1");
+
+BENCHMARK(BM_AxCut_utf8StringLength2_ShortStringChinese)
+    ->Name("Short-string/Chinese/AxCut/2");
+
+// Short string Russian
+BENCHMARK(BM_Steve_strlenUtf8_Traditional_ShortStringRussian)
+    ->Name("Short-string/Russian/Steve/Traditional");
+
+BENCHMARK(BM_Steve_strlenUtf8_ShortStringRussian)
+    ->Name("Short-string/Russian/Steve/Optimized");
+
+BENCHMARK(BM_AxCut_utf8StringLength_ShortStringRussian)
+    ->Name("Short-string/Russian/AxCut/1");
+
+BENCHMARK(BM_AxCut_utf8StringLength2_ShortStringRussian)
+    ->Name("Short-string/Russian/AxCut/2");
 
 //BENCHMARK_MAIN();
 

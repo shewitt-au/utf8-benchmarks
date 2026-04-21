@@ -8,3 +8,7 @@ std::string make_random_utf8(size_t target_bytes);
 extern std::string g_poemEnglish;
 extern std::string g_poemChinese;
 extern std::string g_poemRussian;
+
+extern std::string g_shortStringEnglish;
+extern std::string g_shortStringChinese;
+extern std::string g_shortStringRussian;

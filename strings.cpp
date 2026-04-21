@@ -63,3 +63,7 @@ std::string g_poemRussian =
     "И жаль, что я не мог пройти по обеим.\n"
     "Я долго стоял, одинокий путник,\n"
     "И смотрел вдаль по одной из них.\n";
+
+std::string g_shortStringEnglish = "Short string";
+std::string g_shortStringChinese = "短字符串";
+std::string g_shortStringRussian = "короткая строка";
